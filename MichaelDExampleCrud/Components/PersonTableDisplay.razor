@@ -1,0 +1,21 @@
+﻿<h3>PersonTableDisplay</h3>
+
+@using MichaelDExampleCrud.Classes
+<h3>PersonDisplay</h3>
+
+<MudTable @ref="_mudTable" Items="@PersonRepository.People" Hover="true" >
+    <HeaderContent>
+        <MudTh>GUID</MudTh>
+        <MudTh>First Name</MudTh>
+        <MudTh>Last Name</MudTh>
+        <MudTh>Display Name</MudTh>
+    </HeaderContent>
+
+    <RowTemplate>
+        <MudTd DataLabel="GUID">@context.Id</MudTd>
+        <MudTd DataLabel="First Name">@context.FirstName</MudTd>
+        <MudTd DataLabel="Last Name">@context.LastName</MudTd>
+        <MudTd DataLabel="Display Name">@context.DisplayName</MudTd>
+    </RowTemplate>
+</MudTable>
+
